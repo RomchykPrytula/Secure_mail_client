@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Захищена поштова клієнтська програма</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Захищена поштова клієнтська програма</h1>
+
+    <div class="container">
+        <div class="section">
+            <h2>Надіслати повідомлення</h2>
+            <form id="sendMessageForm">
+                <input type="text" id="recipient" placeholder="Ваша пошта" required>
+                <input type="text" id="subject" placeholder="Тема" required>
+                <textarea id="message" placeholder="Ваше повідомлення" required></textarea>
+                <button type="submit">Надіслати</button>
+            </form>
+        </div>
+        <div class="section">
+            <h2>Отримані повідомлення</h2>
+            <ul id="messageList"></ul>
+            <p id="noMessagesText" style="display: none;">Поки що немає повідомлень</p>
+            <button id="clearMessagesButton">Очистити повідомлення</button>
+
+        </div>
+    </div>
+
+    <!-- Модальне вікно для перегляду повідомлення -->
+    <div id="messageModal" style="display: none;">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2 id="modalSubject"></h2>
+            <p id="modalSender"></p>
+            <p id="modalMessage"></p>
+            <p id="modalSignature"></p>
+            <p id="signatureStatus"></p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
